@@ -12,17 +12,16 @@ import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * Classe PropertiesTest
- * <p>
- * Essa classe é responsável por...
+ * Classe LaurelPropertiesTest
+ * 
+ * Essa classe ...
  *
  * @author Felipe Di Bernardi S Thiago
  */
-@TestPropertySource("classpath:yanny.properties")
-@ActiveProfiles("externalized")
-@SpringJUnitConfig(classes = HearingInterpreterActiveProfileTest.TestConfig.class)
-public class PropertiesTest {
-
+@TestPropertySource("classpath:laurel.properties")
+@ActiveProfiles("laurel-properties")
+@SpringJUnitConfig(classes = LaurelPropertiesTest.TestConfig.class)
+public class LaurelPropertiesTest {
 
     @Configuration
     @ComponentScan("org.springframework.samples.petclinic.sfg")
@@ -37,8 +36,7 @@ public class PropertiesTest {
     void whatIHeard() {
         String word = hearingInterpreter.whatIHeard();
 
-        assertEquals("YaNNy", word);
+        assertEquals("LauREl", word);
 
     }
-
 }

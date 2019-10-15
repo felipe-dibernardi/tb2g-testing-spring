@@ -1,6 +1,7 @@
 package org.springframework.samples.petclinic.sfg;
 
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,6 +12,8 @@ import org.springframework.stereotype.Component;
  * @author Felipe Di Bernardi S Thiago
  */
 @Component
+//@Profile("laurel")
+//@Primary
 public class LaurelWordProducer implements WordProducer {
     @Override
     public String getWord() {
